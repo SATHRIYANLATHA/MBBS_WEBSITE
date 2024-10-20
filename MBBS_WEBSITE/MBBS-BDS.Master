@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MBBS-BDS.Master.cs" Inherits="MBBS_WEBSITE.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+     <%-- Meta tag for responsiveness --%>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<%-- CSS --%>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="fontawesome/css/all.css" rel="stylesheet" />
+<link href="CSS/customstylesheet.css" rel="stylesheet" />
+<link href="CSS/customstylesheet.css?v=1.1" rel="stylesheet" />
+
+
+
+<%-- JS --%>
+
+<script src="bootstrap/js/jquery-3.7.1.min.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="fontawesome/js/all.js"></script>
+
+    
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+ <body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <form id="form1" runat="server" style="flex-grow: 1;">
+
+        <nav class="d-flex justify-content-between pt-1 pb-1" style="background-color:#496c8e;position: fixed; top: 0; left: 0; right: 0; ">
+
+            <a href="#"><img src="pictures/logo.png"  class="ms-2"/></a>
+
+
+            <div  style="text-align:center;color:white" class="ms-4">
+                <b>GOVERNMENT OF TAMIL NADU </b>  <br />
+                <b>SELECTION COMMITTEE, DIRECTORATE OF MEDICAL EDUCATION </b> <br />
+                <b>ADMISSION TO TAMILNADU MBBS/BDS </b> <br />
+                <b>APPLICATION FORM FOR GOVT. QUOTA SEATS IN GOVT. COLLEGES AND </b> <br />
+                <b>GOVT. QUOTA SEATS IN SELF-FINANCING COLLEGES FOR 2025-2026 SESSION </b>  
+
+            </div>
+
+
+            <div class="d-flex justify-content-between align-items-center me-3"> 
+
+                <h6 class="text-white me-2 pt-2" id="headname" runat="server">SATHRIYAN</h6>&nbsp;
+               <asp:Button ID="btnLogout" runat="server" Text="Logout" 
+    OnClick="btnLogout_Click" 
+    CssClass="btn btn-warning" style="border: none; border-radius: 5px; font-size: 0.8em;font-weight:700;outline: none;" />
+ 
+
+            </div>
+                                                      
+        </nav>
+
+
+
+<div class="container-fluid " style="padding: 0; margin: 0;margin-top:128px;">
+
+
+    <div class="row" style="margin: 0;"> <!-- Set row margin to 0 -->
+        <div class="col-3" style="padding: 0;position:fixed;"> <!-- Set padding to 0 for column -->
+
+                                             <div style="background-color:#405f7d;color:white;height:100vh;" class="ps-4 pt-3">
+
+    <div class="pb-3 ">
+        <asp:LinkButton ID="lbPersonalInfo" runat="server" CssClass="text-decoration-none "  style="font-size: larger;color: white; "  OnClick="lbPersonalInfo_Click">
+           <i class="fa fa-user"></i>&nbsp; Personal Information
+        </asp:LinkButton>
+    </div>
+
+    <div class="pb-3  ">
+        <asp:LinkButton ID="lbSpecialReservation" runat="server" CssClass="text-decoration-none" style="font-size: larger;color: white;" OnClick="lbSpecialReservation_Click">
+            <i class="fa fa-superpower"></i>&nbsp; Special Reservation
+        </asp:LinkButton>
+    </div>
+
+    <div class="pb-3">
+        <asp:LinkButton ID="lbAcademicSchooling" runat="server" CssClass="text-decoration-none"  style="font-size: larger;color: white;" OnClick="lbAcademicSchooling_Click">
+            <i class="fa fa-book"></i>&nbsp; Academic & Schooling
+        </asp:LinkButton>
+    </div>
+
+    <div class="pb-3">
+        <asp:LinkButton ID="lbAdditionalInfo" runat="server" CssClass="text-decoration-none"  style="font-size: larger;color: white;" OnClick="lbAdditionalInfo_Click">
+            <i class="fa fa-plus-square"></i>&nbsp; Additional Information
+        </asp:LinkButton>
+    </div>
+
+    <div class="pb-3">
+        <asp:LinkButton ID="lbDocumentsUpload" runat="server" CssClass="text-decoration-none" style="font-size: larger;color: white;" OnClick="lbDocumentsUpload_Click" >
+            <i class="fa fa-upload"></i>&nbsp; Documents Upload
+        </asp:LinkButton>
+    </div>
+
+    <div class="pb-3">
+        <asp:LinkButton ID="lbApplicationPreview" runat="server" CssClass="text-decoration-none"  style="font-size: larger;color: white;" OnClick="lbApplicationPreview_Click" >
+            <i class="fa fa-eye"></i>&nbsp; Application Preview
+        </asp:LinkButton>
+    </div>
+
+    <div class="pb-3">
+        <asp:LinkButton ID="lbPrintDownload" runat="server" CssClass="text-decoration-none"  style="font-size: larger;color: white;">
+            <i class="fa fa-print"></i>&nbsp; Print / Download
+        </asp:LinkButton>
+    </div>
+
+                                                
+
+                                                 
+</div>
+        </div>
+
+
+        <div class="col-9" style="padding: 0;padding-left:25%;width:100%;"> 
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+   
+       
+
+        <div class="clearfix"></div>
+
+
+         <footer id="footer" runat="server" style="background-color:#496c8e;z-index:inherit" class="d-flex flex-row  justify-content-between ps-5 pe-5 pt-2 pb-2" >
+
+    
+         <span class="small pt-3 text-white" style="text-align:center;z-index:2000">
+             Website <br />
+             www.tnmedicalselection.org <br />
+             www.tnhealth.org
+         </span>
+     
+
+      
+          <span  class="small text-white" style="text-align:center;">
+              Email <br />
+              mbbsbds2020enquiry@gmail.com <br />
+              Contact No. <br />
+              044-2836 1674 / 044-2986 2045 / 044-2836 <br />
+              0675 / 044-2836 0674 / 044-2836 4884 
+          </span>
+    
+
+     
+          <span  class="small text-white" style="text-align:center;">
+              Contact <br />
+              DIRECTORATE OF MEDICAL EDUCATION (DME), <br />
+              Selection Committee <br />
+              #162, Periyar E.V.R. High Road, <br />
+              Kilpauk, Chennai-600010
+          </span>
+      
+
+ </footer>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
